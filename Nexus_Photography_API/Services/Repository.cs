@@ -28,6 +28,7 @@ namespace Nexus_Photography_API.Services
         public async Task<APIResponse> AddCoupleFilmAsync(CoupleFilmsDTO entity)
         {
             CoupleFilm model = new CoupleFilm
+
             {
                 Id = entity.Id,
                 Thumbnail = entity.Thumbnail,
