@@ -18,8 +18,7 @@ public partial class CoupleStory
     [Column(TypeName = "text")]
     public string? Description { get; set; }
 
-    [StringLength(500)]
-    public string? Image { get; set; }
+    public byte[]? Image { get; set; }
 
     [StringLength(255)]
     public string? Location { get; set; }

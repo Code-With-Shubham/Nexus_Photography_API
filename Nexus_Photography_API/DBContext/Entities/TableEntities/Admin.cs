@@ -7,8 +7,8 @@ using Microsoft.EntityFrameworkCore;
 namespace Nexus_Photography_API.DBContext.Entities.TableEntities;
 
 [Table("Admin")]
-[Index("Username", Name = "UQ__Admin__536C85E462C2834F", IsUnique = true)]
-[Index("Pswd", Name = "UQ__Admin__A5C0E1105711EDB0", IsUnique = true)]
+[Index("Username", Name = "UQ__Admin__536C85E481D18D03", IsUnique = true)]
+[Index("Pswd", Name = "UQ__Admin__A5C0E110BE19440D", IsUnique = true)]
 public partial class Admin
 {
     [Key]

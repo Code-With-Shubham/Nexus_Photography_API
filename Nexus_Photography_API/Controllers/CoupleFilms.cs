@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Nexus_Photography_API.DBContext.Entities.TableEntities;
-using Nexus_Photography_API.Models.DTOs;
 using Nexus_Photography_API.Models.Response;
 using Nexus_Photography_API.Services;
 
@@ -11,14 +10,14 @@ namespace Nexus_Photography_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DataController : ControllerBase
+    public class CoupleFilms : ControllerBase
     {
 
         private readonly IRepository _repository;
         private readonly IConfiguration _configuration;
-        private readonly ILogger<DataController> _logger;
+        private readonly ILogger<CoupleFilms> _logger;
 
-        public DataController(IRepository repository, IConfiguration configuration, ILogger<DataController> logger)
+        public CoupleFilms(IRepository repository, IConfiguration configuration, ILogger<CoupleFilms> logger)
         {
             _configuration = configuration;
             _repository = repository;
@@ -37,7 +36,7 @@ namespace Nexus_Photography_API.Controllers
 
 
         [HttpPost("couplefilms")]
-        public async Task<APIResponse> CreateCoupleFilm([FromBody] CoupleFilmsDTO entity)
+        public async Task<APIResponse> CreateCoupleFilm([FromForm] CoupleFilmDTO entity)
         {
             var created = await _repository.AddCoupleFilmAsync(entity);
             if (created.Code == 200)
@@ -56,7 +55,7 @@ namespace Nexus_Photography_API.Controllers
         }
 
         [HttpPut("couplefilms/{id}")]
-        public async Task<IActionResult> UpdateCoupleFilm(int id, [FromBody] CoupleFilm entity)
+        public async Task<IActionResult> UpdateCoupleFilm(int id, [FromForm] CoupleFilmDTO entity)
         {
             if (id != entity.Id) return BadRequest();
             var updated = await _repository.UpdateCoupleFilmAsync(entity);
@@ -72,31 +71,7 @@ namespace Nexus_Photography_API.Controllers
             return NoContent();
         }
 
-        
 
-        // Photogallary
-
-        // CoupleStories
-
-        // CulturalWeddings
-
-        // DestinationWeddings
-
-        // MostPopularFilms
-
-        // MostPopularWeddings
-
-        // PhotographyStyles
-
-        // Testimonials
-
-        // ClientSays
-
-        // ContactForms
-
-        // Admins
-
-        // Add methods for handling requests related to the above entities here
 
 
 

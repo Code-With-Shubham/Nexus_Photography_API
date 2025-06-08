@@ -15,8 +15,7 @@ public partial class MostPopularWedding
     [StringLength(255)]
     public string? Title { get; set; }
 
-    [StringLength(500)]
-    public string? Image { get; set; }
+    public byte[]? Image { get; set; }
 
     [Column(TypeName = "text")]
     public string? Description { get; set; }

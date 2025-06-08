@@ -20,6 +20,5 @@ public partial class ClientSay
     [Column(TypeName = "text")]
     public string? Quote { get; set; }
 
-    [StringLength(500)]
-    public string? Image { get; set; }
+    public byte[]? Image { get; set; }
 }

@@ -12,8 +12,7 @@ public partial class PhotoGallery
     [Key]
     public int Id { get; set; }
 
-    [StringLength(500)]
-    public string? Src { get; set; }
+    public byte[]? Src { get; set; }
 
     [StringLength(50)]
     public string? Layout { get; set; }

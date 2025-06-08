@@ -12,8 +12,7 @@ public partial class PhotographyStyle
     [Key]
     public int Id { get; set; }
 
-    [StringLength(500)]
-    public string? Src { get; set; }
+    public byte[]? Src { get; set; }
 
     [StringLength(255)]
     public string? Title { get; set; }

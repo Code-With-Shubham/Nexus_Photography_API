@@ -15,8 +15,7 @@ public partial class CulturalWedding
     [StringLength(255)]
     public string? Title { get; set; }
 
-    [StringLength(500)]
-    public string? Image { get; set; }
+    public byte[]? Image { get; set; }
 
     [StringLength(500)]
     public string? ReadBlogs { get; set; }

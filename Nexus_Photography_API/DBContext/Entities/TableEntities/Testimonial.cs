@@ -15,8 +15,7 @@ public partial class Testimonial
     [StringLength(255)]
     public string? CoupleName { get; set; }
 
-    [StringLength(500)]
-    public string? Thumbnail { get; set; }
+    public byte[]? Thumbnail { get; set; }
 
     [StringLength(500)]
     public string? VideoLink { get; set; }

@@ -11,8 +11,7 @@ public partial class MostPopularFilm
     [Key]
     public int Id { get; set; }
 
-    [StringLength(255)]
-    public string? Thumbnail { get; set; }
+    public byte[]? Thumbnail { get; set; }
 
     [StringLength(500)]
     public string? YoutubeLink { get; set; }
